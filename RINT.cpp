@@ -12,7 +12,7 @@ RINT::RINT()
     x = 0;
 }
 
-RINT RINT::operator=(RINT y)
+RINT RINT::operator=(RINT &y)
 {
     x = y.get();
     return *this;

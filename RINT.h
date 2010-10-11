@@ -10,9 +10,11 @@ class RINT
         RINT(int y);
         RINT();
         RINT operator=(RINT y);
-        RINT& operator=(int y);
-        RINT operator+(RINT y);
-        RINT operator-(RINT y);
+        RINT& operator=(int &y);
+        RINT operator+(RINT &y);
+        RINT operator+(int y);
+        RINT operator-(RINT &y);
+        RINT operator-(int y);
         int get() { return x;}
         friend ostream& operator<<(ostream &stream, RINT y)
         {
