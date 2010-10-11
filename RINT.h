@@ -2,25 +2,26 @@
 #define RINT_H
 #include <iostream>
 #include <string.h>
+using namespace std;
 
 class RINT
 {
     public:
         RINT(int y);
         RINT();
-        RINT operator=(RINT &y);
+        RINT operator=(RINT y);
         RINT& operator=(int y);
-        RINT operator+(RINT &y);
-        RINT operator-(RINT &y);
+        RINT operator+(RINT y);
+        RINT operator-(RINT y);
         int get() { return x;}
-        friend ostream& operator<<(ostream &stream, const RINT y)
+        friend ostream& operator<<(ostream &stream, RINT y)
         {
             stream<<y.get();
             return stream;
         }
-        friend istream& operator>>(istream &stream, const RINT &y)
+        friend istream& operator>>(istream &stream, RINT &y)
         {
-            stream>>x;
+            stream>>y;
             return stream;
         }
     private:
