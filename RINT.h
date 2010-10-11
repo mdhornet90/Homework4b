@@ -4,8 +4,6 @@
 #include <string.h>
 using namespace std;
         
-RINT operator-(int y);
-        
 class RINT
 {
     public:
