@@ -3,7 +3,9 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
-
+        
+RINT operator-(int y);
+        
 class RINT
 {
     public:
@@ -12,9 +14,7 @@ class RINT
         RINT operator=(RINT y);
         RINT& operator=(int &y);
         RINT operator+(RINT &y);
-        RINT operator+(int y);
         RINT operator-(RINT &y);
-        RINT operator-(int y);
         int get() { return x;}
         friend ostream& operator<<(ostream &stream, RINT y)
         {
@@ -29,4 +29,15 @@ class RINT
     private:
         int x;
 };
+
+RINT operator+(RINT a, RINT b)
+{
+    return RINT(a.get() + b.get());
+}
+
+RINT operator-(RINT a, RINT b)
+{
+    return RINT(a.get() - b.get());
+}
+
 #endif
