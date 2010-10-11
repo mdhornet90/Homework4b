@@ -11,7 +11,7 @@ class RINT
     public:
         RINT(int y);
         RINT();
-        RINT operator=(RINT y);
+        RINT& operator=(RINT& y);
         RINT& operator=(int &y);
         RINT operator+(RINT &y);
         RINT operator-(RINT &y);
