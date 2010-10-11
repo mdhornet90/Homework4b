@@ -2,6 +2,16 @@
 #include <string.h>
 #include "RINT.h"
 
+RINT::RINT(int y)
+{
+    x = y;
+}
+
+RINT::RINT()
+{
+    x = 0;
+}
+
 RINT RINT::operator=(RINT &y)
 {
     x = y.get();
@@ -22,16 +32,4 @@ RINT RINT::operator+(RINT &y)
 RINT RINT::operator-(RINT &y)
 {
     return RINT(x - y.get());
-}
-
-ostream& RINT::operator<<(ostream &stream, RINT &y)
-{
-    stream<<y.x;
-    return stream;
-}
-
-istream& RINT::operator>>(istream &stream, RINT &y)
-{
-    stream>>x;
-    return stream;
 }
