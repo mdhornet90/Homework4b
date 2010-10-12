@@ -18,7 +18,7 @@ RINT& RINT::operator=(RINT &y)
     return *this;
 }
 
-RINT& RINT::operator=(int &y)
+RINT& RINT::operator=(int y)
 {
     x = y;
     return *this;
@@ -26,10 +26,10 @@ RINT& RINT::operator=(int &y)
 
 RINT RINT::operator+(RINT &y)
 {
-    return RINT(x + y.get());
+    return x;
 }
 
 RINT RINT::operator-(RINT &y)
 {
-    return RINT(x - y.get());
+    return RINT(-x);
 }
