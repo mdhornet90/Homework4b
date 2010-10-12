@@ -9,7 +9,7 @@ class RINT
     public:
         RINT(int y);
         RINT();
-        RINT& operator=(RINT& y);
+        RINT& operator=(RINT y);
         RINT& operator=(int y);
         RINT operator+(RINT &y);
         RINT operator-(RINT &y);
@@ -28,14 +28,7 @@ class RINT
         int x;
 };
 
-RINT operator+(RINT a, RINT b)
-{
-    return RINT(a.get() + b.get());
-}
-
-RINT operator-(RINT a, RINT b)
-{
-    return RINT(a.get() - b.get());
-}
+RINT operator+(RINT a, RINT b);
+RINT operator-(RINT a, RINT b);
 
 #endif
