@@ -24,14 +24,14 @@ RINT& RINT::operator=(int y)
     return *this;
 }
 
-RINT RINT::operator+(RINT &y)
+RINT RINT::operator+()
 {
     return x;
 }
 
-RINT RINT::operator-(RINT &y)
+RINT RINT::operator-()
 {
-    return RINT(-x);
+    return -x;
 }
 
 RINT operator+(RINT a, RINT b)

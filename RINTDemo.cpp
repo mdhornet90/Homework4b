@@ -10,7 +10,7 @@ using namespace std;
 
 // note - you may need to change the definition of the main function to
 // be consistent with what your C++ compiler expects.
-int _main(void)
+int main(void)
 {
     cout << endl << "A test of the RINT class  (9/8/08)" << endl << endl;
 

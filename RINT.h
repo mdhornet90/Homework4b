@@ -11,8 +11,8 @@ class RINT
         RINT();
         RINT& operator=(RINT y);
         RINT& operator=(int y);
-        RINT operator+(RINT &y);
-        RINT operator-(RINT &y);
+        RINT operator+();
+        RINT operator-();
         int get() { return x;}
         friend ostream& operator<<(ostream &stream, RINT y)
         {
@@ -21,7 +21,9 @@ class RINT
         }
         friend istream& operator>>(istream &stream, RINT &y)
         {
-            stream>>y;
+            int q;
+            stream>>q;
+            y = q;
             return stream;
         }
     private:
